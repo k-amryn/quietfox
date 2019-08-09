@@ -36,7 +36,7 @@ Simply open userChrome.css in a text editor and change the values at the top of 
 
 
 ## How to install
-1. [Download](https://coekuss.com/quietfox/quietfox.zip) and unzip.
+1. [Download](https://github.com/coekuss/quietfox/archive/master.zip) and unzip.
 2. Go to [about:support](about:support) in Firefox and open your Profile Folder
 3. Drop your unzipped "chrome" folder into the folder that appears.
 4. Restart Firefox
