@@ -1,6 +1,5 @@
 ![quietfox](https://coekuss.com/quietfox/logo.png)
 ![](https://coekuss.com/quietfox/clean.png)
-# *Very Clean Firefox UI Mod*
 
 ## The Goal
 This userChrome mod was created to make the Firefox UI cleaner and more modern without sacrificing any of its original features. You can still use themes, and you can still use Compact Mode and Touch Mode. You can pretty much forget that you have a mod installed, it works *quietly* in the background. Here are some of the notable features:
