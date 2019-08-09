@@ -1,6 +1,8 @@
 /* https://github.com/coekuss/quietfox
 Thanks for using my file */
 
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
 
 * { 
 /* -------------------- 🎨 Customization 🎨 -------------------- */
@@ -44,10 +46,16 @@ tab[visuallyselected] .tab-background::after {
 
 
 
+/* This makes certain menus adapt to your toolbar text color. Can make menu text illegible in some transparent themes, remove if needed. */
+panelview:not([extension]),
+.panel-arrowcontent {
+    color: var(--toolbar-color) !important;
+}
+/*-------------------------------------------------------------------*/
 
 
 
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
 
 /* -------------------- Transitions for some things -------------------- */
 toolbarbutton,
@@ -59,6 +67,9 @@ vbox
     transition: background-color var(--animation-speed) !important;
 
 } 
+
+
+
 
 /* -------------------- Style tab bar -------------------- */
 
@@ -825,10 +836,11 @@ menupopup .arrowscrollbox-scrollbox {
     background-color: var(--toolbar-bgcolor) !important;
 }
 
+
+
 [lwthemetextcolor="dark"] panelview:not([extension]),
 [lwthemetextcolor="dark"] .panel-arrowcontent {
     background-color: #f5f6f7 !important;   
-    color: var(--toolbar-color) !important;
 }
 
 .panel-subview-body  {
