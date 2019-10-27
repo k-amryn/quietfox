@@ -1,3 +1,5 @@
+## Note: The new Firefox 70 has changed the Firefox UI, so this mod will have some quirks until I update it for the new Firefox. Please bear with me.
+
 ![quietfox](https://coekuss.com/quietfox/logo.png)
 ![](https://coekuss.com/quietfox/clean.png)
 
