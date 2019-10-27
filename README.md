@@ -29,7 +29,7 @@ Simply open userChrome.css in a text editor and change the values at the top of 
 ![](https://coekuss.com/quietfox/snappy.gif)
 
 
-## Menus that adapt to your theme
+## Theme-adapted menus
 ![](https://coekuss.com/quietfox/menus.jpg)
 
 ## Address bar buttons appear when needed
