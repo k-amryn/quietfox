@@ -42,8 +42,13 @@ Simply open userChrome.css in a text editor and change the values at the top of 
 4. Go to `about:config` in your Firefox and set the value of `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` (this enables the loading of userChrome mods)
 5. Restart Firefox
 
----
+
 ✔ Tested on Firefox 70 on Windows 10
+
+---
+
+### Older version
+If you need Quietfox for Firefox 68 or 69, [here it is.](https://github.com/coekuss/quietfox/releases/download/v1.0/quietfox69.zip)
 
 ### Note about transparent themes
 Although deliberate effort has been put into making this mod work with most themes, some transparent themes make menu text hard to read. Transparent themes also make the bottom corners of rounded tabs look wonky, so the file includes instructions to remove tabs' bottom corner rounding if you encounter this issue. I'd also recommend the extension [Firefox Color](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/) to tune the colors to your taste.
