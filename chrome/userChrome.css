@@ -182,6 +182,12 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
     border: 1px solid grey !important;
 }
 
+#BMB_bookmarksShowAll {
+    display: none !important;
+}
+
+
+
 /* not compact buttons */
 
 :root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
@@ -299,7 +305,9 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
     padding-bottom: 1px !important;
 }
 
-
+:root:not([uidensity="touch"]):not([uidensity="compact"]) #library-animatable-box {
+    margin-top: 4px !important;
+}
 
 
 /* compact density buttons */
@@ -381,8 +389,9 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
     padding-bottom: 1px !important;
 }
 
-
-
+:root[uidensity="compact"] #library-animatable-box {
+    margin-top: 5px !important;
+}
 
 
 /* touch density buttons */
@@ -457,7 +466,9 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
     padding-bottom: 1px !important;
 }
 
-
+:root[uidensity="touch"] #library-animatable-box {
+    margin-top: 7px !important;
+}
 
 
 
@@ -564,19 +575,6 @@ toolbarbutton:not(.titlebar-button):not([class^="findbar-find"]):not([class^="sc
 .urlbar-page-action[open] .urlbar-icon {
     fill: var(--toolbar-color) !important;
 }
-
-
-#library-button[animate] {
-    margin-bottom: 0px !important;
-    margin-top: 50px !important;
-}
-
-#library-button[animate] image {
-    margin-bottom: -120px !important;
-    margin-top: 100px !important;
-}
-
-
 
 
 .urlbar-scheme {
