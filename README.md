@@ -36,22 +36,22 @@ Simply open userChrome.css in a text editor and change the values at the top of 
 
 
 ## How to install
-1. [Download](https://github.com/coekuss/quietfox/releases/download/v2.0/quietfox70.zip) and unzip
+1. [Download](https://github.com/coekuss/quietfox/releases/download/v3.0/quietfox71.zip) and unzip
 2. Go to `about:support` in Firefox and open your Profile Folder
 3. Drop your unzipped "chrome" folder into the folder that appears
 4. Go to `about:config` in your Firefox and set the value of `toolkit.legacyUserProfileCustomizations.stylesheets` to `true` (this enables the loading of userChrome mods)
 5. Restart Firefox
 
 
-✔ Tested on Firefox 70 on Windows 10
+✔ Tested on Firefox 71 on Windows 10
 
 ---
 
 ### Older version
-If you need Quietfox for Firefox 68 or 69, [here it is.](https://github.com/coekuss/quietfox/releases/download/v1.0/quietfox69.zip)
+If you need Quietfox for an older version of Firefox, [see the releases page.](https://github.com/coekuss/quietfox/releases)
 
 ### Note about transparent themes
-Although deliberate effort has been put into making this mod work with most themes, some transparent themes make menu text hard to read. Transparent themes also make the bottom corners of rounded tabs look wonky, so the file includes instructions to remove tabs' bottom corner rounding if you encounter this issue. I'd also recommend the extension [Firefox Color](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/) to tune the colors to your taste.
+Although deliberate effort has been put into making this mod work with most themes, some transparent themes make menu text hard to read. Transparent themes also make the bottom corners of rounded tabs look wonky, so the file includes instructions to remove tabs' bottom corner rounding if you encounter this issue.
 
 ## P. S.
 This mod is the product of many late nights of zen laser focus. If it enhances your web experience, consider donating a small sum to show your support ❤
