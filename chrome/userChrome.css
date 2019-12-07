@@ -83,10 +83,15 @@ vbox
 
 /* -------------------- Style tab bar -------------------- */
 
-tab[first-visible-tab] {
-    padding-left: 12px !important;
-
+.titlebar-spacer[type="pre-tabs"] {
+    border-inline-end: 0px !important;
+    width: 0px !important;
 }
+
+scrollbox[part="scrollbox"][flex="1"][orient="horizontal"][smoothscroll="true"] {
+    padding-left: 12px !important;
+}
+
 
 .tab-background, .tab-loading-burst  {
     border-radius: var(--tab-corner-rounding) var(--tab-corner-rounding) 0px 0px !important;
@@ -134,10 +139,7 @@ tab:hover::after {
     --tabs-border-color: transparent !important;
 }
 
-.titlebar-spacer[type="pre-tabs"] {
-    border-inline-end: 0px !important;
-    width: 0px !important;
-}
+
 
 tab[visuallyselected] {
         box-shadow: 0px 3px 12px -5px black !important;
