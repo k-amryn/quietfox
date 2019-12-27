@@ -88,7 +88,7 @@ vbox
     width: 0px !important;
 }
 
-scrollbox[part="scrollbox"][flex="1"][orient="horizontal"][smoothscroll="true"] {
+scrollbox[part="scrollbox"][flex="1"][orient="horizontal"] {
     padding-left: 12px !important;
 }
 
