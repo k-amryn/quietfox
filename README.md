@@ -8,27 +8,57 @@ This userChrome mod was created to make the Firefox UI cleaner and more modern w
 ## Customizable values 
 Simply open userChrome.css in a text editor and change the values at the top of the file. Restart Firefox to see changes.
 
+### Toolbar Customizations
+
 ```CSS
 /* -------------------- 🎨 Customization 🎨 -------------------- */
     --tab-corner-rounding: 7px;
-    --animation-speed: 0.4s;
+    /* --menu-corner-rounding: 10px; */
+    /* --menu-item-height: 30px;     */
     --button-corner-rounding: 20px;
+    --animation-speed: 0.4s;
 ```
 ![](https://coekuss.com/quietfox/quietfox70/fluid2.gif)
 
------
+<br>
 
 ```CSS
 /* -------------------- 🎨 Customization 🎨 -------------------- */
     --tab-corner-rounding: 0px;
-    --animation-speed: 0s;
+    /* --menu-corner-rounding: 10px; */
+    /* --menu-item-height: 30px;     */
     --button-corner-rounding: 0px;
+    --animation-speed: 0.4s;
 ```
 ![](https://coekuss.com/quietfox/quietfox70/snappy2.gif)
 
+### Menu Customizations
+```CSS
+/* -------------------- 🎨 Customization 🎨 -------------------- */
+    /* --tab-corner-rounding: 7px;     */
+    --menu-corner-rounding: 10px;
+    --menu-item-height: 30px;
+    /* --button-corner-rounding: 20px; */
+    /* --animation-speed: 0.4s;        */
+```
+![](https://coekuss.com/quietfox/tall_rounded.png)
+
+<br>
+
+```CSS
+/* -------------------- 🎨 Customization 🎨 -------------------- */
+    /* --tab-corner-rounding: 7px;     */
+    --menu-corner-rounding: 0px;
+    --menu-item-height: 25px;
+    /* --button-corner-rounding: 20px; */
+    /* --animation-speed: 0.4s;        */
+```
+![](https://coekuss.com/quietfox/short_sharp.png)
+
+
 
 ## Theme-adapted menus
-![](https://coekuss.com/quietfox/menus.jpg)
+![](https://coekuss.com/quietfox/menus72.jpg)
 
 ## Address bar buttons appear when needed
 ![](https://coekuss.com/quietfox/urlbar_buttons.gif)
@@ -43,7 +73,7 @@ Simply open userChrome.css in a text editor and change the values at the top of 
 5. Restart Firefox
 
 
-✔ Tested on Firefox 71 on Windows 10
+✔ Tested on Firefox 72 on Windows 10 and Ubuntu 19.10
 
 ---
 
