@@ -41,7 +41,7 @@ Simply open userChrome.css in a text editor and change the values at the top of 
     /* --button-corner-rounding: 20px; */
     /* --animation-speed: 0.4s;        */
 ```
-![](https://coekuss.com/quietfox/tall_rounded.png)
+<img align="center" src="https://coekuss.com/quietfox/tall_rounded.png">
 
 <br>
 
@@ -53,7 +53,7 @@ Simply open userChrome.css in a text editor and change the values at the top of 
     /* --button-corner-rounding: 20px; */
     /* --animation-speed: 0.4s;        */
 ```
-![](https://coekuss.com/quietfox/short_sharp.png)
+<img align="center" src="https://coekuss.com/quietfox/short_sharp.png">
 
 
 
