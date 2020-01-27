@@ -1,6 +1,6 @@
 /*
 
-Quietfox for Firefox 72
+Quietfox for Firefox 71.0
 
 https://github.com/coekuss/quietfox
 
@@ -8,17 +8,19 @@ Thanks for using my file
 
  */
 
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+
 * { 
 /* -------------------- 🎨 Customization 🎨 -------------------- */
     --tab-corner-rounding: 5px;
+    --animation-speed: 0.25s;
     --button-corner-rounding: 4px;
-    --menu-corner-rounding: 10px;
-    --menu-item-height: 30px;
-    --animation-speed: 0.15s;
+    
 }
 
 
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
 
 /* Bottom corner rounding for tabs, Remove this section if your tab bottom corners look bad */
 tab[visuallyselected] .tab-background::before,
@@ -28,7 +30,7 @@ tab[visuallyselected] .tab-background::after {
     position: absolute !important;
     width: var(--tab-corner-rounding) !important;
     height: var(--tab-corner-rounding) !important;
-    bottom: -1px !important;
+    bottom: 0px !important;
     pointer-events: none !important;
     background-color: transparent !important;
     transition: var(--animation-speed) !important;
@@ -44,7 +46,7 @@ tab[visuallyselected] .tab-background::before {
 tab[visuallyselected] .tab-background::after {
     border-bottom-left-radius: var(--tab-corner-rounding) !important;
     right: 0px !important;
-    transform: translateX(calc(var(--tab-corner-rounding) + 1px)) !important;
+    transform: translateX(var(--tab-corner-rounding)) !important;
     box-shadow: -4px 4px 0px 4px var(--toolbar-bgcolor) !important;
     transition: var(--animation-speed) !important;
 }
@@ -53,8 +55,7 @@ tab[visuallyselected] .tab-background::after {
 
 
 
-/* This makes certain menus adapt to your toolbar text color. Can make menu text illegible in 
-some transparent themes, remove if needed. */
+/* This makes certain menus adapt to your toolbar text color. Can make menu text illegible in some transparent themes, remove if needed. */
 panelview:not([extension]),
 .panel-arrowcontent {
     background-color: var(--toolbar-bgcolor) !important;
@@ -144,10 +145,6 @@ tab[visuallyselected] {
         box-shadow: 0px 3px 12px -5px black !important;
 }
 
-[last-visible-tab] {
-    margin-right: calc(var(--tab-corner-rounding) + 2px) !important; /* fix unexpected tab overflow */
-}
-
 
 
 
@@ -216,9 +213,8 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
     background-color: var(--toolbarbutton-active-background) !important;
 }
 
-:root:not([uidensity="compact"]) #PersonalToolbar { /* bookmark bar */
-    height: 30px !important; 
-}
+
+
 
 
 /* normal density buttons */
@@ -255,6 +251,15 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
     margin-right: 1px !important;
 }
 
+
+
+
+:root:not([uidensity="touch"]):not([uidensity="compact"]) .urlbar-icon {
+    margin-top: 1px !important;
+    margin-bottom: 1px !important;
+}
+
+
 :root:not([uidensity="touch"]):not([uidensity="compact"]) #urlbar {
     height: 36px !important;
     margin-top: 0px !important;
@@ -265,7 +270,7 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
 
 
 :root:not([uidensity="touch"]):not([uidensity="compact"]) .urlbar-icon:not(#pocket-button) {
-    width: 34px !important;
+    width: 32px !important;
     height: 36px !important;
     padding: 8px !important;
 }
@@ -290,16 +295,17 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
     margin-left: 5px !important;
 }
 
+:root:not([uidensity="touch"]):not([uidensity="compact"]) #tabs-newtab-button {
+    margin-left: 1px !important;
+    margin-bottom: 1px !important;
+    padding-bottom: 1px !important;
+}
+
 :root:not([uidensity="touch"]):not([uidensity="compact"]) #library-animatable-box {
     margin-top: 4px !important;
 }
 
-:root:not([uidensity="touch"]):not([uidensity="compact"]) #tabs-newtab-button {
-    margin-left: -5px !important;
-    padding-left: 2px !important;
-    margin-bottom: 1px !important;
-    padding-bottom: 1px !important;
-}
+
 
 
 /* compact density buttons */
@@ -369,19 +375,22 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
     padding: 2px !important;
 }
 
-:root[uidensity="compact"] #PersonalToolbar {
-   height: 25px !important;
+:root[uidensity="compact"] .bookmark-item {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+
+:root[uidensity="compact"] #tabs-newtab-button {
+    margin-left: 1px !important;
+    margin-bottom: 1px !important;
+    padding-bottom: 1px !important;
 }
 
 :root[uidensity="compact"] #library-animatable-box {
     margin-top: 5px !important;
 }
 
-:root[uidensity="compact"] #tabs-newtab-button {
-    margin-left: -5px !important;
-    margin-bottom: 1px !important;
-    padding-bottom: 1px !important;
-}
 
 
 /* touch density buttons */
@@ -440,22 +449,25 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
     padding-right: 5px !important;
 }
 
+
+:root[uidensity="touch"] .bookmark-item {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+}
+
 :root[uidensity="touch"] tab {
     height: 40px !important;
+}
+
+:root[uidensity="touch"] #tabs-newtab-button {
+    margin-left: 3px !important;
+    margin-bottom: 3px !important;
+    padding-bottom: 1px !important;
 }
 
 :root[uidensity="touch"] #library-animatable-box {
     margin-top: 7px !important;
 }
-
-:root[uidensity="touch"] #tabs-newtab-button {
-    margin-left: -5px !important;
-    margin-bottom: 2px !important;
-    padding-right: 3px !important;
-    padding-left: 3px !important;
-    padding-bottom: 1px !important;
-}
-
 
 
 /* various */
@@ -485,10 +497,10 @@ toolbarbutton:not(.titlebar-button):not([class^="findbar-find"]):not([class^="sc
 .bookmark-item {
     padding-left: 7px !important;
     padding-right: 7px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
     margin-right: 0px !important;
 }
-
-
 
 #urlbar {
     border-radius: calc(1px + var(--button-corner-rounding)) !important;
@@ -502,7 +514,7 @@ toolbarbutton:not(.titlebar-button):not([class^="findbar-find"]):not([class^="sc
 
 
 /* style address bar */
-#urlbar {
+#urlbar-container *:not(#identity-box):not(#tracking-protection-icon-container) {
     border-color: transparent !important;
     box-shadow: none !important;
 }
@@ -519,7 +531,7 @@ toolbarbutton:not(.titlebar-button):not([class^="findbar-find"]):not([class^="sc
     display: none !important;
 }
 
-.urlbar-icon, #userContext-indicator, #userContext-label {
+.urlbar-icon, .urlbar-icon image, #userContext-indicator, #userContext-label {
     fill: transparent !important;
     background-color: transparent !important;
     color: transparent !important;
@@ -529,7 +541,10 @@ toolbarbutton:not(.titlebar-button):not([class^="findbar-find"]):not([class^="sc
 
 #urlbar:hover .urlbar-icon,
 #urlbar:active .urlbar-icon, 
-#urlbar[focused] .urlbar-icon {
+#urlbar[focused] .urlbar-icon,
+#urlbar:hover .urlbar-icon:not([open]) image,
+#urlbar:active .urlbar-icon image, 
+#urlbar[focused] .urlbar-icon image {
     fill: var(--toolbar-color) !important;
 }
 
@@ -556,6 +571,7 @@ toolbarbutton:not(.titlebar-button):not([class^="findbar-find"]):not([class^="sc
 .urlbar-page-action[open] .urlbar-icon {
     fill: var(--toolbar-color) !important;
 }
+
 
 .urlbar-scheme {
     padding-bottom: 11px !important;
@@ -627,6 +643,9 @@ toolbarbutton:not(.titlebar-button):not([class^="findbar-find"]):not([class^="sc
     transition: fill-opacity var(--animation-speed) !important;
 }
 
+
+
+
 [lwthemetextcolor="dark"] .urlbarView-body-outer {
     background-color: #f5f6f7 !important;
     color: var(--toolbar-color) !important;
@@ -658,74 +677,15 @@ toolbarbutton:not(.titlebar-button):not([class^="findbar-find"]):not([class^="sc
     display: none !important;
 }
 
-menupopup,
-menupopup menuitem,
-menupopup menu,
-menupopup menuseparator {
-	-moz-appearance: none !important;
+menupopup {
+    -moz-appearance: none !important;
 }
-
-menupopup:not(#BMB_bookmarksPopup) {
-    padding: 6px 9px 9px !important;
-	margin: -6px -9px 0 !important;
-    border: 0 !important;
-    background: 0 !important;
-}
-
-menu[open] menupopup:not(#BMB_bookmarksPopup) {
-	margin: -12px -9px 0 !important;
-}
-
-#BMB_bookmarksPopup menu[open] menupopup {
-    transform: translateY(4px) !important;
-}
-
-menupopup menuseparator
-{
-	margin-top: 5px !important;
-    margin-bottom: 5px !important;
-	padding: 0px !important;
-    border-bottom: none !important;
-	opacity: 0.2 !important;
-}
-.popup-internal-box {
-    background: Menu !important; /* fall back if adaptable colors are removed */
-}
-
-.popup-internal-box:not(.in-bookmarks-menu) {
-	padding: 6px 0 !important;
-}
-
-
-.panel-arrowcontent {
-    padding-top: 0px !important;
-    border: none !important;
-}
-
-/* shadows and rounded corners for menus */
-.popup-internal-box:not(.in-bookmarks-menu) {
-    border-radius: var(--menu-corner-rounding) !important;
-    box-shadow: 0px 2px 9px -3px black !important;
-}
-
-.panel-arrowcontainer .panel-arrowcontent, .popup-internal-box, hbox[flex="1"][part="innerbox"] {
-    border-radius: var(--menu-corner-rounding) !important;
-}
-
-
-
-
-.in-bookmarks-menu {
-    padding-bottom: 5px !important;
-    padding-top: 5px !important;
-}
-
 
 menu,
 menuitem, 
 menucaption {
     -moz-appearance: none !important;
-    height: var(--menu-item-height) !important;
+    height: 25px !important;
 }
 
 menu,
@@ -750,24 +710,12 @@ menu:not(.subviewbutton) > .menu-right image {
     border-bottom-color: transparent !important;
 }
 
-panelview toolbarbutton:not(#fxa-manage-account-button) {
-    height: var(--menu-item-height) !important;
-}
 
-#BMB_bookmarksPopup .menu-right {
-    height: 23px !important;
-}
 
-#sidebar-switcher-bookmarks, #customization-uidensity-menuitem-compact {
-    margin-top: 5px !important;
-}
 
-#customization-lwtheme-menu-header {
-    margin-top: 0px !important;
-}
+@media (-moz-os-version: windows-xp), (-moz-os-version: windows-vista),
+(-moz-os-version: windows-win7), (-moz-os-version: windows-win8), (-moz-os-version: windows-win10) {
 
-/* windows-specific adjustments */
-@media (-moz-os-version: windows-win7), (-moz-os-version: windows-win8), (-moz-os-version: windows-win10) {
     .bookmark-item .scrollbutton-up {
         margin-top: -3px !important;
     }
@@ -803,35 +751,8 @@ panelview toolbarbutton:not(#fxa-manage-account-button) {
         margin-right: 0px !important;
         padding-left: 0px !important;
     }
-    
-    .in-bookmarks-menu {
-        padding-bottom: 5px !important;
-        padding-top: 1px !important;
-    }
-    
-    #BMB_bookmarksPopup menu menupopup {
-        transform: translateY(-1px) !important;
-    }
 }
 
-/* linux and mac-specific adjustments */
-@media not (-moz-os-version: windows-win10)  {
-    @media not (-moz-os-version: windows-win8) {
-       @media not (-moz-os-version: windows-win7)  {
-            hbox[flex="1"][part="innerbox"] {
-                box-shadow: 0px 2px 12px -6px black !important;
-            }
-
-            .menu-iconic-left {
-                margin: 0px 6px !important;
-            }
-           
-           #BMB_bookmarksPopup menu[open] menupopup {
-                transform: translateY(1px) !important;
-            }
-        }
-    }
-}
 
 
 /* make menus adapt to theme */
@@ -841,7 +762,9 @@ menucaption {
     color: var(--toolbar-color) !important;
 }
 
-.popup-internal-box {
+menupopup {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
     background-color: var(--toolbar-bgcolor, Menu) !important;
 }
 
