@@ -41,7 +41,10 @@ Simply open userChrome.css in a text editor and change the values at the top of 
     /* --button-corner-rounding: 20px; */
     /* --animation-speed: 0.4s;        */
 ```
-<img align="center" src="https://coekuss.com/quietfox/tall_rounded.png">
+
+<p align="center">
+    <img src="https://coekuss.com/quietfox/tall_rounded.png">
+</p>
 
 <br>
 
@@ -53,8 +56,9 @@ Simply open userChrome.css in a text editor and change the values at the top of 
     /* --button-corner-rounding: 20px; */
     /* --animation-speed: 0.4s;        */
 ```
-<img align="center" src="https://coekuss.com/quietfox/short_sharp.png">
-
+<p align="center">
+    <img src="https://coekuss.com/quietfox/short_sharp.png">
+</p>
 
 
 ## Theme-adapted menus
