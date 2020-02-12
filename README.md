@@ -28,7 +28,7 @@ Simply open userChrome.css in a text editor and change the values at the top of 
     /* --menu-corner-rounding: 10px; */
     /* --menu-item-height: 30px;     */
     --button-corner-rounding: 0px;
-    --animation-speed: 0.4s;
+    --animation-speed: 0.0s;
 ```
 ![](https://coekuss.com/quietfox/quietfox70/snappy2.gif)
 
