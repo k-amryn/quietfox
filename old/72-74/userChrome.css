@@ -1,6 +1,6 @@
 /*
 
-Quietfox for Firefox 75
+Quietfox for Firefox 72
 
 https://github.com/coekuss/quietfox
 
@@ -12,7 +12,7 @@ Thanks for using my file
 /* -------------------- 🎨 Customization 🎨 -------------------- */
     --tab-corner-rounding: 5px;
     --button-corner-rounding: 4px;
-    --menu-corner-rounding: 5px;
+    --menu-corner-rounding: 10px;
     --menu-item-height: 30px;
     --animation-speed: 0.15s;
 }
@@ -92,14 +92,6 @@ scrollbox[part="scrollbox"][flex="1"][orient="horizontal"] {
 }
 
 
-[sizemode="maximized"] [first-visible-tab] {
-    margin-left: -12px !important;
-}
-
-[sizemode="maximized"] [first-visible-tab] stack {
-    margin-left: 12px !important;
-}
-
 .tab-background, .tab-loading-burst  {
     border-radius: var(--tab-corner-rounding) var(--tab-corner-rounding) 0px 0px !important;
     margin: -1px !important;
@@ -148,7 +140,7 @@ tab:hover::after {
 
 
 
-tab[visuallyselected] .tab-background {
+tab[visuallyselected] {
         box-shadow: 0px 3px 12px -5px black !important;
 }
 
@@ -510,52 +502,18 @@ toolbarbutton:not(.titlebar-button):not([class^="findbar-find"]):not([class^="sc
 
 
 /* style address bar */
-#urlbar-background {
-    background-color: transparent !important;
+#urlbar {
     border-color: transparent !important;
     box-shadow: none !important;
 }
 
-#urlbar[breakout][breakout-extend] {
-    top: 4px !important;
-    left: 0px !important;
-    padding: 0px 0px 0px 0px !important;
-    width: 100% !important;
-}
-
-#urlbar[breakout][breakout-extend] > #urlbar-input-container {
-    height: var(--urlbar-toolbar-height) !important;
-    padding-block: 0px !important;
-    padding-inline: 0px !important;
-    padding-bottom: 6px !important;
-    margin-bottom: -5px !important;
-    margin-top: -1px !important;
-}
-
-.urlbarView.megabar {
-    width: 100% !important;
-    margin-inline: 0px !important;
-    box-shadow: 0px 5px 15px -7px black !important;
-    border-radius: 0px 0px var(--menu-corner-rounding) var(--menu-corner-rounding) !important;
-    border: none !important;
-    padding-top: 0px !important;
-}
-
-.urlbarView-body-inner {
-    border:none !important;    
-}
-
-.search-one-offs {
-    background-color: var(--toolbar-bgcolor) !important;
-}
-
-
-
-
-
 #tracking-protection-icon-container {
     border-inline-end: none !important;
 }
+
+
+
+
 
 #pageActionSeparator {
     display: none !important;
