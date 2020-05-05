@@ -1,6 +1,6 @@
 /*
 
-Quietfox for Firefox 75
+Quietfox for Firefox 76
 
 https://github.com/coekuss/quietfox
 
@@ -520,6 +520,7 @@ toolbarbutton:not(.titlebar-button):not([class^="findbar-find"]):not([class^="sc
     top: 4px !important;
     left: 0px !important;
     padding: 0px 0px 0px 0px !important;
+    height: 100% !important;
     width: 100% !important;
 }
 
@@ -730,11 +731,11 @@ menupopup menuseparator
     border-bottom: none !important;
 	opacity: 0.2 !important;
 }
-.popup-internal-box {
+.menupopup-arrowscrollbox {
     background: Menu !important; /* fall back if adaptable colors are removed */
 }
 
-.popup-internal-box:not(.in-bookmarks-menu) {
+.menupopup-arrowscrollbox:not(.in-bookmarks-menu) {
 	padding: 6px 0 !important;
 }
 
@@ -745,12 +746,12 @@ menupopup menuseparator
 }
 
 /* shadows and rounded corners for menus */
-.popup-internal-box:not(.in-bookmarks-menu) {
+.menupopup-arrowscrollbox:not(.in-bookmarks-menu) {
     border-radius: var(--menu-corner-rounding) !important;
     box-shadow: 0px 2px 9px -3px black !important;
 }
 
-.panel-arrowcontainer .panel-arrowcontent, .popup-internal-box, hbox[flex="1"][part="innerbox"] {
+.panel-arrowcontainer .panel-arrowcontent, .menupopup-arrowscrollbox, hbox[flex="1"][part="innerbox"] {
     border-radius: var(--menu-corner-rounding) !important;
 }
 
@@ -883,7 +884,7 @@ menucaption {
     color: var(--toolbar-color) !important;
 }
 
-.popup-internal-box {
+.menupopup-arrowscrollbox {
     background-color: var(--toolbar-bgcolor, Menu) !important;
 }
 
