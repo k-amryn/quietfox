@@ -309,6 +309,10 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
     padding-bottom: 1px !important;
 }
 
+:root:not([uidensity="touch"]):not([uidensity="compact"]) #PersonalToolbar {
+    margin-top: -2px !important;
+}
+
 
 /* compact density buttons */
 
@@ -325,6 +329,9 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
     margin-top: 1px !important;
 }
 
+:root[uidensity="compact"] #back-button {
+    margin-left: 3px !important;
+}
 
 :root[uidensity="compact"] #back-button[open] {
     background-color: var(--toolbarbutton-active-background) !important; 
@@ -343,10 +350,6 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
     min-width: 2px !important;
     padding-left: 6px !important;
     padding-right: 6px !important;
-}
-
-:root[uidensity="compact"] #nav-bar{
-    padding-top: 1px !important;
 }
 
 
@@ -379,6 +382,7 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
 
 :root[uidensity="compact"] #PersonalToolbar {
    height: 25px !important;
+    margin-top: -3px !important;
 }
 
 :root[uidensity="compact"] #library-animatable-box {
@@ -395,8 +399,8 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
 /* touch density buttons */
 
 :root[uidensity="touch"] #nav-bar .toolbarbutton-1:not(#back-button)  {
-    margin-top: 5px !important;
-    margin-bottom: 3px !important;
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
     padding-left: 0px !important;
     padding-right: 0px !important;
 }
@@ -420,10 +424,8 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
 }
 
 :root[uidensity="touch"] #nav-bar{
-    padding-top: 2px !important;
+    padding-top: 0px !important;
 }
-
-
 
 :root[uidensity="touch"] .urlbar-icon:not(#pocket-button) {
     width: 34px !important;
@@ -464,7 +466,10 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
     padding-bottom: 1px !important;
 }
 
-
+:root[uidensity="touch"] #PersonalToolbar {
+   height: 35px !important;
+    margin-top: -3px !important;
+}
 
 /* various */
 .urlbar-input-box,
