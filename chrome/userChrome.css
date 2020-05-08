@@ -505,6 +505,7 @@ toolbarbutton:not(.titlebar-button):not([class^="findbar-find"]):not([class^="sc
 
 #urlbar {
     border-radius: calc(1px + var(--button-corner-rounding)) !important;
+    border: none !important;
 }
 
 /* style identity box */
@@ -517,7 +518,7 @@ toolbarbutton:not(.titlebar-button):not([class^="findbar-find"]):not([class^="sc
 /* style address bar */
 #urlbar-background {
     background-color: transparent !important;
-    border-color: transparent !important;
+    border: none !important;
     box-shadow: none !important;
 }
 
@@ -616,7 +617,7 @@ toolbarbutton:not(.titlebar-button):not([class^="findbar-find"]):not([class^="sc
 }
 
 .urlbar-input-box {
-    padding: 5px 5px !important;
+    padding: 0px 5px !important;
 }
 
 #urlbar {
