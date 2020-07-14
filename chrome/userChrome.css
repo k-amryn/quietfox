@@ -539,7 +539,8 @@ toolbarbutton:not(.titlebar-button):not([class^="findbar-find"]):not([class^="sc
     margin-top: -1px !important;
 }
 
-.urlbarView.megabar {
+/* urlbarView = the menu when you expand the address bar */
+.urlbarView {
     width: 100% !important;
     margin-inline: 0px !important;
     box-shadow: 0px 5px 15px -7px black !important;
