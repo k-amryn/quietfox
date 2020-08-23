@@ -185,6 +185,16 @@ toolbarbutton:not(#back-button):not([disabled]):not([open]):hover,
     transition: fill-opacity var(--animation-speed) !important;
 }
 
+.tabbrowser-tab .tab-close-button
+{
+    display:none;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-close-button
+{
+    display:-moz-box !important;
+}
+
 .findbar-textbox:focus {
     border: 1px solid grey !important;
 }
