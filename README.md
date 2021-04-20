@@ -1,3 +1,6 @@
+### No longer being maintained
+Quietfox was fun to build, but with the [upcoming updates to Firefox's UI](https://wiki.mozilla.org/Firefox/Proton#Feature_2_-_Address_bar), much of its role of modernizing Firefox's interface is no longer needed. I would like to think I had some influence on some of Firefox's new design decisions, but either way I think they're doing good work. Thank you for enjoying Quietfox, best wishes to everyone
+
 ![quietfox](https://coekuss.com/quietfox/logo.png)
 ![](https://coekuss.com/quietfox/quietfox70/clean2.png)
 
@@ -77,7 +80,7 @@ Simply open userChrome.css in a text editor and change the values at the top of 
 5. Restart Firefox
 
 
-✔ Tested on Firefox 78 on Windows 10 and Ubuntu 19.10
+✔ Tested on Firefox 87 on Windows 10 and Ubuntu 19.10
 
 ---
 
