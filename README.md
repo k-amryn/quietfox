@@ -1,5 +1,5 @@
 ### No longer being maintained
-Quietfox was fun to build, but with the [upcoming updates to Firefox's UI](https://wiki.mozilla.org/Firefox/Proton#Feature_2_-_Address_bar), much of its role of modernizing Firefox's interface is no longer needed. I would like to think I had some influence on some of Firefox's new design decisions, but either way I think they're doing good work. Thank you for enjoying Quietfox, best wishes to everyone.
+Quietfox was fun to build, but with the [new updates to Firefox's UI](https://www.mozilla.org/en-US/firefox/89.0/releasenotes/), much of its role of modernizing Firefox's interface is no longer needed. I would like to think I had some influence on some of Firefox's new design decisions, but either way I think they're doing good work. Thank you for enjoying Quietfox, best wishes to everyone.
 
 ![quietfox](https://coekuss.com/quietfox/logo.png)
 ![](https://coekuss.com/quietfox/quietfox70/clean2.png)
